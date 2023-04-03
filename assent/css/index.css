@@ -154,28 +154,7 @@ img.eye {
     left: 43%;
 }
 
-@media (min-width:400px) {
-  img.eye {
-    max-width: 3em;
-}
-}
 
-@media (max-width:600px) {
-  .card-container {
-    max-width: 200px;
-}
-  .card-container {
-    display: none;
-  }
-  .contenedor img{
-    height: 20%;
-    width: auto;
-    margin-right: 20px;
-  }
-  .contenedor  {
-    justify-content: center;
-  }
-}
 
 .hero-image-container::after {
     content: '';
@@ -224,11 +203,7 @@ div.attribution {
     color: var(--var-soft-blue);
 }
 
-@media (min-width:600px) {
-    body {
-        font-size: 18px;
-    }
-}
+
 .personaje{
   display: flex;
   flex-direction: row;
@@ -360,3 +335,30 @@ div.attribution {
   justify-content: center;
 }
 
+@media (min-width:400px) {
+  img.eye {
+    max-width: 3em;
+}
+.contenedor img{
+  height: auto;
+  width: 70vw;
+  margin: auto;
+}
+.contenedor  {
+  display: block;
+  justify-content: center;
+}
+.card-container {
+  flex: 90%;
+}
+}
+
+@media (max-width:600px) {
+  body {
+    font-size: 18px;
+}
+  .card-container {
+    max-width: 200px;
+}
+
+}
