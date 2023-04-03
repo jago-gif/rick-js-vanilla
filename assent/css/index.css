@@ -160,6 +160,23 @@ img.eye {
 }
 }
 
+@media (max-width:600px) {
+  .card-container {
+    max-width: 200px;
+}
+  .card-container {
+    display: none;
+  }
+  .contenedor img{
+    height: 20%;
+    width: auto;
+    margin-right: 20px;
+  }
+  .contenedor  {
+    justify-content: center;
+  }
+}
+
 .hero-image-container::after {
     content: '';
     background-image: url("https://i.postimg.cc/9MtT4GZY/view.png");
@@ -334,8 +351,8 @@ div.attribution {
 }
 
 .contenedor img{
-  height: 50vh;
-  width: auto;
+  height: auto;
+  width: 40vw;
   margin-right: 20px;
 }
 .contenedor  {
