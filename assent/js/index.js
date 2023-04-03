@@ -128,17 +128,28 @@ function abrirModal(id){
     }
   });
   if(personajeSelect!=null){
+    let episodios ='';
+    personajeSelect.episode.forEach(capitulo => {
+      let cap = capitulo.replace("https://rickandmortyapi.com/api/episode/", "");
+    episodios += "Capitulo "+cap+", "
+    });
+    
     datosPersonaje= 
     '<div id="myModal" class="modal">'+
       '<div class="modal-content">'+
                   // '  <button id="closeModal" class="close">&times;</button>'+
         '<h2 class="subTitulo">' + personajeSelect.name + '</h2>'+
         '<div class="contenedor">'+
-          '<div class="contenido">'+
              '<img class="hero-image" src="' + personajeSelect.image + '" alt="' + personajeSelect.name + '"/>' +
-             '<p>akjsdhkajshdkjashdkjasdhasd</p>'+
-
           '</div">'+
+          '<div class="contenido">'+
+          '<p>Creado: '+personajeSelect.created+'</p>'+
+          '<p>Genero:'+personajeSelect.gender+'</p>'+
+          '<p>Locación: '+personajeSelect.location.name+'</p>'+
+          '<p>Origen: '+personajeSelect.origin.name+'</p>'+
+          '<p>Especie: '+personajeSelect.species+'</p>'+
+          '<p>Estado: '+personajeSelect.gender+'</p>'+
+          '<p>episodios:'+episodios+'</p>'+
 
         '</div">'+
       '</div>'+
@@ -146,7 +157,7 @@ function abrirModal(id){
 
     document.getElementById('personajeDatos').innerHTML = datosPersonaje;
   }
-  console.log(personajeSelect.name)
+  console.log(personajeSelect)
   document.getElementById("personaje").style.visibility="hidden";
 
 
